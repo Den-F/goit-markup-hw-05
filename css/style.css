@@ -1,0 +1,562 @@
+:root {
+  --primari-text-color: #212121;
+  --title-text-color: #757575;
+  --accent-color: #2196f3;
+  --primari-background-color: #ffffff;
+  --second-text-color: #ffffff;
+  --second-background-color: #2f303a;
+  /* Grid */
+  --items: 1;
+  --indent: 30px;
+  /* --start-color: rgb(243, 255, 13);
+  --end-color: green; */
+}
+
+body {
+  background-color: var(--primari-background-color);
+  color: var(--primari-text-color);
+  font-family: "roboto", sans-serif;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+/* Убирает все точки в ul */
+.list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+}
+.container {
+  /* outline: 2px solid blueviolet; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+/* КОНЕЦ */
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--indent) / 2);
+}
+.grid-item {
+  flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+  margin: calc(var(--indent) / 2);
+}
+/* Style for header */
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+.page-box {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  color: var(--primari-text-color);
+  align-items: center;
+  margin-right: 93px;
+}
+.accent {
+  color: #2196f3;
+}
+.site-nav {
+  display: flex;
+}
+
+.contakts-list {
+  margin-left: auto;
+}
+
+.site-nav :hover,
+.site-nav :focus {
+  color: var(--accent-color);
+}
+.contakts-list {
+  display: flex;
+  align-items: center;
+}
+.nav-link,
+.contakt-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.nav-link,
+.contakt-link {
+  color: var(--primari-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.contakt-icon {
+  fill: #757575;
+  margin-right: 10px;
+}
+.contakt-link {
+  display: block;
+}
+.contakt-link:hover .contakt-icon {
+  fill: var(--accent-color);
+}
+.nav-link.current {
+  color: var(--accent-color);
+}
+.contakt-link {
+  color: var(--title-text-color);
+}
+.contakts-list:hover,
+.contakts-list:focus {
+  color: var(--accent-color);
+}
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.contakts-item:not(:last-child) {
+  margin-right: 50px;
+}
+/* 
+        END HEADER 
+         */
+
+/* Стили для index.html */
+
+/* Hero */
+.hero-section {
+  background-color: var(--second-background-color);
+  text-align: center;
+  padding-bottom: 200px;
+  padding-top: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hwork4/backgraund-img.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 696px;
+}
+/* Button */
+.button-hero {
+  display: inline-block;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--second-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 0;
+}
+
+.button-hero:hover,
+.button-hero:focus {
+  background-color: #188ce8;
+}
+/* END HERO */
+
+/* !!!!!!!   SECTION !!!!!!*/
+/*  
+!!!!!!!!!!!Секция особенности!!!!!!!! */
+
+/* .container.feature {
+  /* background-image: repeating-radial-gradient(
+    circle,
+    purple,
+    purple 10px,
+    #4b026f 10px,
+    #4b026f 40px
+  ); 
+} */
+
+/* !!!!!    Семантическое скрытие элементов !!!!*/
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+/*    !!!!!!!!!!!!!!! */
+.feature-list {
+  --items: 4;
+  align-items: center;
+}
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f4fa;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.feature-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin: 0;
+}
+
+/* Чем мы занимаемся  */
+.section-doing {
+  padding-top: 0;
+}
+.doing-list {
+  --items: 3;
+}
+
+.doing-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+/*    !!!!!!Команда !!!!!!*/
+
+.team-list {
+  --items: 4;
+}
+
+.team-name {
+  background-color: #f5f4fa;
+}
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.team-list .grid-item {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.team-position {
+  color: var(--title-text-color);
+  font-size: 16px;
+  line-height: 1.19;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+.team-box {
+  padding: 30px 20px;
+  text-align: center;
+}
+.team-box-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-box-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: #afb1b8;
+}
+.team-box-link:hover,
+.team-box-link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.socials-item-team:not(:last-child) {
+  margin-right: 10px;
+}
+.team-box-icon {
+  fill: currentColor;
+}
+/* !!!! НАШИ КЛИЕНТЫ !!!! */
+.clients-list {
+  display: flex;
+}
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients-item {
+  display: block;
+  /* border: 1px solid #afb1b8; */
+  width: 170px;
+  height: 92px;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+}
+.clients-icon {
+  fill: #afb1b8;
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+/*  !!!!!!    FOOTER    !!!!! */
+
+footer {
+  color: var(--primari-background-color);
+  background-color: var(--second-background-color);
+  /* max-width: 1600px; */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container.footer {
+  display: flex;
+}
+.footer .logo {
+  display: block;
+  color: var(--second-text-color);
+  margin-bottom: 20px;
+}
+.footer .contakt-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0;
+}
+.adress-link {
+  color: var(--second-text-color);
+  font-style: normal;
+  margin-bottom: 9px;
+}
+.contakt-link:hover {
+  color: var(--accent-color);
+}
+.contakt-link:focus {
+  color: var(--accent-color);
+}
+.contakt-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-box {
+  margin-left: 70px;
+}
+.footer-box-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.footer-box-link:hover,
+.footer-box-link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.footer-box-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding-top: 12px;
+}
+.footer-box-list {
+  display: flex;
+  justify-content: center;
+}
+.footer-box-icon {
+  fill: currentColor;
+}
+.footer-item:not(:last-child) {
+  margin-right: 10px;
+}
+/* .socials {
+  display: flex;
+  justify-content: center;
+} */
+
+/* !!!!!!!  Стили для portfolio.html !!!!!*/
+
+/* !!!!! BUTTONS !!!!! */
+.btn-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+.btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+.btn-filter.current {
+  background-color: var(--accent-color);
+  color: var(--second-text-color);
+}
+.btn-filter {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  border-radius: 4px;
+  height: 38px;
+  border: 0;
+  padding: 6px 22px;
+  background: #f5f4fa;
+  color: var(--primari-text-color);
+  min-width: 73px;
+  max-width: 145px;
+}
+
+.btn-filter:hover,
+.btn-filter:focus {
+  background-color: var(--accent-color);
+  color: var(--primari-background-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+/*  !!!!!!!  
+                   PORTFOLIO  !!!! */
+.portfolio-list {
+  --items: 3;
+  /* overflow: hidden; */
+}
+.link-portfolio-blok {
+  display: block;
+}
+.link-portfolio-blok:hover,
+.link-portfolio-blok:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-img-box {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.portfolio-subtitle {
+  color: #212121;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--title-text-color);
+}
